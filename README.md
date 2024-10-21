@@ -25,17 +25,20 @@ Kompilacja i Uruchomienie
 
 Aby skompilować program, użyj:
 
-make
+    make
 
 2. Uruchomienie
 
 Po kompilacji, aby uruchomić program, wpisz:
 
-make run_cw1
+    make run_cw1
 
 gdzie run_cw1 to jest podpunkt a z zadania - (f(x+h)-f(x-h))/h.
 
-make run_cw1_2
+    make run_cw1_2
+
+Aby wyczyścić wszystko z plikóœ skompilowanych użyj
+make clean
 
 a run_cw1_2 to jest podpunkt b, gdzie jest to (f(x+h) - f(x-h))/2\*h
 Wynikiem będzie wygenerowanie wykresu błędów numerycznych dla typów float i double.
