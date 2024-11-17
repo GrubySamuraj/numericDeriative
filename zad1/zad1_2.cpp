@@ -40,6 +40,7 @@ int writePlot(const vector<double> &xValsFloat, const vector<double> &yValsFloat
     fprintf(gnuplotPipe, "set title 'Błąd numeryczny pochodnej'\n");
     fprintf(gnuplotPipe, "set xlabel 'log10(h)'\n");
     fprintf(gnuplotPipe, "set ylabel 'log10(E(h))'\n");
+    fprintf(gnuplotPipe, "set grid\n");
     fprintf(gnuplotPipe, "set logscale x\n");
     fprintf(gnuplotPipe, "set logscale y\n");
     fprintf(gnuplotPipe, "set format x '10^{%%L}'\n");
@@ -68,7 +69,7 @@ Result floatDeriative(float x)
 {
     Result result;
     float epsilon = std::numeric_limits<float>::epsilon();
-    float h = epsilon;
+    float h = 10e-20;
 
     while (h < 0.1)
     {
@@ -85,7 +86,7 @@ Result doubleDeriative(double x)
 {
     Result result;
     double epsilon = std::numeric_limits<double>::epsilon();
-    double h = epsilon;
+    double h = 10e-20;
 
     while (h < 0.1)
     {

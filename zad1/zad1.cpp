@@ -68,7 +68,7 @@ Result floatDeriative(float x)
 {
     Result result;
     float epsilon = std::numeric_limits<float>::epsilon();
-    float h = epsilon;
+    float h = 10e-20;
 
     while (h < 0.1)
     {
@@ -85,7 +85,7 @@ Result doubleDeriative(double x)
 {
     Result result;
     double epsilon = std::numeric_limits<double>::epsilon();
-    double h = epsilon;
+    double h = 10e-20;
 
     while (h < 0.1)
     {
